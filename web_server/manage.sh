@@ -62,7 +62,7 @@ list_vhosts() {
 
 # Step 4 — add vhost
 add_vhost() {
-    read -rp "Domain name (e.g. example.com): " DOMAIN
+    read -rp "Domain name + zone (e.g. dommain -> my-website.dns1-local <- zone): " DOMAIN
     [[ -z "${DOMAIN}" ]] && die "Domain name is required."
 
     read -rp "Document root [/var/www/${DOMAIN}/]: " DOC_ROOT
